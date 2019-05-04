@@ -1,0 +1,240 @@
+$text-color: #707070;
+$tablet-break-point: 768px;
+
+html {
+    box-sizing: border-box;
+  }
+
+  //inherit border-box on all elements in the universe and before and after
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: $text-color;
+}
+
+.main-wrapper {
+    display: grid;
+    padding: 20px 5% 0px 5%;
+    grid-template-columns: repeat(4, 20%);
+    grid-column-gap: 5%;
+}
+
+
+//Reusable Classes.
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;    
+}
+
+.space-divider {
+    margin-top: 50px;
+}
+
+.project-card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 222px;
+    height: 131px;
+    border-radius: 20px;
+    border: 2px solid $text-color;
+    img {
+        max-width: 100%;
+        height: auto;
+        
+    }
+}
+
+.project-card-title {
+    padding-top: 10px;
+    padding-left: 5px;        
+}
+
+//NAVBAR - MOBILE and Tablet
+.navbar {
+    grid-column: 1/5;
+    align-self: end;
+    text-align: end;
+
+    .navbar-hamburger {
+        cursor: pointer;
+    }
+    .is-active {
+        text-align: start;
+    }
+
+    .navbar-items {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: white;
+        overflow-x: hidden;
+        height: 100%;
+        width: 0px;
+        transition: .5s;
+        .close {
+            align-self: flex-start;
+            font-size: 24px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .navbar-item {
+            padding: 20px;
+            color: $text-color;
+            text-decoration: none;
+            width: 132px;
+        }
+    }
+
+    .is-active {
+        width: 100%;
+    }
+}
+
+
+//HOME section - Mobile
+.home-wrapper {
+    grid-column: 1/5;
+
+    .landing-title {
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .landing-logos {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        color: black;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    //projects home section.
+    .home-projects-wrapper {
+
+
+        .project-cards-container {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            .btn {
+                align-self: flex-end;
+                padding: 10px 20px;
+                border-radius: 20px;
+                border: 2px solid $text-color;
+                color: $text-color;
+                font-size: 12px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .5s;
+            }
+
+            .btn:hover {
+                background-color: $text-color;
+                color: white;
+                transition: .5s;
+            }
+        }
+
+        .project-card {
+            margin-top: 20px;
+        }
+    }
+
+    //About Me Home Section
+    .home-about-me-wrapper {
+        .sub-title {
+            font-weight: bold;
+        }
+
+        .about-me-container {
+            width: 80%;
+
+            div {
+                font-size: 13px;
+            }
+        }
+    }
+
+
+    //SKills List Home
+    .home-skills-wrapper {
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(3, 36%);
+            grid-row-gap: 10px;
+        }
+    }
+
+
+    //Contact Me Home
+    .contact-list {
+        svg {
+            margin-right: 50px;
+        }
+    }
+}
+
+
+.show-img {
+    display: none;
+}
+
+
+//TABLET SIZE
+@media only screen and (min-device-width : $tablet-break-point) {
+    //HEADER SECTION - TABLET
+    .landing-wrapper {
+        height: 50vh;
+        display: flex;
+        flex-flow: row nowrap;
+        margin-top: 50px;
+    }
+
+    .landing-img {
+        width: 400px;
+        height: 400px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .show-img {
+        display: block;
+    }
+
+    //PROJECT SECTION - TABLET
+    .home-wrapper {
+        .home-projects-wrapper {
+            .project-cards-container {
+                flex-direction: row;
+                justify-content: space-between;
+
+                .btn {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }  
+}
