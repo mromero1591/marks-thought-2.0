@@ -96,8 +96,8 @@ export default function Home() {
         </h1>
 
         <div className="contact-list">
-        <FontAwesomeIcon icon='envelope' />
-        <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+        <a href="mailto:mromero1591@gmail.com"><FontAwesomeIcon icon='envelope' /></a>
+        <a href='https://linkedin.com/in/markromero1591' rel="noopener noreferrer" target='_blank'><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></a>
         </div>
       </section>
       </div>

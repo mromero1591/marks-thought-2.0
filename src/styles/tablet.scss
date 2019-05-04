@@ -1,0 +1,80 @@
+$tablet-break-point: 768px;
+
+//TABLET SIZE
+@media only screen and (min-device-width : $tablet-break-point) {
+
+    .section-title {
+        font-size: 32px;
+    }
+    //HEADER SECTION - TABLET
+    .landing-wrapper {
+        height: 50vh;
+        display: flex;
+        flex-flow: row nowrap;
+        padding-top: 50px;
+    }
+
+    .landing-img {
+        width: 400px;
+        height: 400px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .show-img {
+        display: block;
+    }
+
+    //PROJECT SECTION - TABLET
+    .home-wrapper {
+        .landing-title {
+            font-size: 36px;
+        }
+
+        
+        .home-projects-wrapper {
+            background-size: cover;
+            .project-cards-container {
+                flex-direction: row;
+                justify-content: space-between;
+
+                .btn {
+                    align-self: flex-end;
+                }
+            }
+        }
+
+        .project-card-img {
+            box-shadow: 2px 12px 12px 0px rgba(112, 112, 112, 0.75);
+            width: 300px;
+            height: 167px;
+        }
+
+        .home-about-me-wrapper {
+            .sub-title {
+                font-size: 24px;
+            }
+            .about-me-container {
+                p {
+                    font-size: 20px;
+                }
+                div {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .home-skills-wrapper {
+            .skills-list {
+                grid-row-gap: 40px;
+            }
+        }
+    }  
+
+    .footer {
+        font-size: 16px;
+    }
+}

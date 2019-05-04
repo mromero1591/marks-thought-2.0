@@ -6,6 +6,9 @@ import { faHome, faBars, faLayerGroup, faInfoCircle, faAddressCard, faTimes, faF
 import {fab} from '@fortawesome/free-brands-svg-icons';
 //Custom Imports
 import './App.scss';
+import './styles/tablet.scss';
+import './styles/desktop.scss';
+
 import Navbar from './Components/Navbar/Navbar';
 import routes from './routes.js';
 
