@@ -4,10 +4,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SublasaImg from '../../assets/sublasa_landing.png';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import resumeFile from '../../assets/resume.pdf';
-import host from '../../assets/radio-host.svg';
-import host2 from '../../assets/host.svg';
+import host2 from '../../assets/host-me.svg';
+import path from '../../assets/new_path.svg';
+import revPath from '../../assets/rev_path.svg';
+import Footer from '../Footer/Footer';
 
 export default function Home() {
+
+  var clipPath = () => {
+    return {
+      background: `url(${path})`,
+      backgroundSize: 'cover'
+    }
+  }
+
+  var revClipPath = () => {
+    return {
+      background: `url(${revPath})`,
+      backgroundSize: 'cover'
+    }
+  }
   return (
     <div className='home-wrapper'>
       <header className="landing-wrapper">
@@ -32,19 +48,19 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="home-projects-wrapper space-divider">        
-        <h1 className='section-title'>
-          Projects
-        </h1>
-
-        <div className="project-cards-container">
-          <ProjectCard img={SublasaImg} title={'Sublasa'} />
-
-          <button className='btn'>More Projects</button>
-        </div>
-      </section>
-
-      <section className='home-about-me-wrapper space-divider'>
+      <div className="home-projects-container">
+          <section className="home-projects-wrapper space-divider" style={clipPath()}>       
+            <h1 className='section-title'>
+              Projects
+            </h1>
+    
+            <div className="project-cards-container">
+              <ProjectCard img={SublasaImg} title={'Sublasa'} />
+    
+              <button className='btn'>More Projects</button>
+            </div>
+          </section>
+      <section className='home-about-me-wrapper space-divider' >
         <h1 className='section-title'>
             Get To Know Me
         </h1>
@@ -60,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='home-skills-wrapper space-divider'>
+      <section className='home-skills-wrapper space-divider' style={revClipPath()}>
         <h1 className='section-title'>
             Skills
         </h1>
@@ -84,6 +100,8 @@ export default function Home() {
         <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
         </div>
       </section>
+      </div>
+      <Footer />
     </div>
   )
 }

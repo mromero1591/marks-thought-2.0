@@ -2,8 +2,25 @@ import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom';
 
+import NavBarLink from './NavBarLink/NavBarLink.js';
+
 function Navbar(props) {
     const [isActive, setActive] = useState(false);
+    const [pageStatus, updatePage] = useState({
+        home: true,
+        projects: false,
+        about: false,
+        contact: false});
+
+    function closeNav() {
+        setActive(false);
+    }
+
+    function functionUpdatePages() {
+        var newPages = {
+            
+        }
+    }
 
     return(
         <nav className='navbar'>
@@ -16,10 +33,10 @@ function Navbar(props) {
                 {isActive &&
                     <span className='close navbar-hamburger' onClick={() => {setActive(isActive ? false : true)}}><FontAwesomeIcon icon="times" /> </span>
                 }
-                <Link onClick={() => {setActive(false)}} to='/' className='navbar-item' href="#"><FontAwesomeIcon icon="home" /> Home </Link>
-                <Link onClick={() => {setActive(false)}} to='/projects' className='navbar-item' href="#"><FontAwesomeIcon icon="layer-group" /> Portfolio</Link>
-                <Link onClick={() => {setActive(false)}} to='/about' className='navbar-item' href="#"><FontAwesomeIcon icon="info-circle" /> About</Link>
-                <Link onClick={() => {setActive(false)}} to='/contact' className='navbar-item' href="#"><FontAwesomeIcon icon="address-card" /> Contact</Link>
+                <NavBarLink active={pageStatus.home ? 'active-page' : ''} close={closeNav} path='/' icon='home' name='Home' />
+                <NavBarLink active={pageStatus.projects ? 'active-page' : ''} close={closeNav} path='/projects' icon='layer-group' name='Portfolio' />
+                <NavBarLink active={pageStatus.about ? 'active-page' : ''}  close={closeNav} path='/about' icon='info-circle' name='About' />
+                <NavBarLink active={pageStatus.contact ? 'active-page' : ''}  close={closeNav} path='/contact' icon='address-card' name='Contact' />
             </div>
         </nav>
     )
