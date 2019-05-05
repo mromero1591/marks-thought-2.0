@@ -11,6 +11,7 @@ import './styles/desktop.scss';
 
 import Navbar from './Components/Navbar/Navbar';
 import routes from './routes.js';
+import Footer from './Components/Footer/Footer';
 
 library.add(faHome, faBars, faLayerGroup, faInfoCircle, faAddressCard, faTimes,faFileAlt,faDatabase, faCode, faEnvelope, fab);
 
@@ -19,6 +20,7 @@ function App() {
     <main className="main-wrapper">
       <Navbar />
       {routes}
+      <Footer />
     </main>
   );
 }

@@ -56,8 +56,19 @@ export default function Home() {
     
             <div className="project-cards-container">
               <ProjectCard img={SublasaImg} title={'Sublasa'} />
-    
-              <button className='btn'>More Projects</button>
+              <div className='project-content'>
+                <ul>
+                  <li><strong>Tech Used :</strong> React | JavaScript | NodeJs | PostgresSQL | npm | Bulma | Google API</li>
+                  <li><strong>Summary :</strong> Site allows a user to subscribe and read their favorite newsletter without having to share their email or personal information with dozens of companies. </li>
+                  <li className='project-card-notes'>
+                    <strong>Notes:</strong> <br />
+                    Used google apis to manage newsletter subscriptions by moving over their content in html format to display on the site <br />
+                    Used local autorization to create and manage user profiles, allowing them to subscirbe to indvidual newsletters.  <br />
+                    Used postgres and JavaScript to determin newsletters that have been read allowing the site to surface most popular newsletters.
+                  </li>
+                </ul>
+              </div>
+              {/* <button className='btn'>More Projects</button> */}
             </div>
           </section>
       <section className='home-about-me-wrapper space-divider' >
@@ -101,7 +112,6 @@ export default function Home() {
         </div>
       </section>
       </div>
-      <Footer />
     </div>
   )
 }

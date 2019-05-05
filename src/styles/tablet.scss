@@ -7,11 +7,13 @@ $tablet-break-point: 768px;
         font-size: 32px;
     }
     //HEADER SECTION - TABLET
-    .landing-wrapper {
-        height: 50vh;
-        display: flex;
-        flex-flow: row nowrap;
-        padding-top: 50px;
+    .home-wrapper {
+        .landing-wrapper {
+            height: 50vh;
+            display: flex;
+            flex-flow: row nowrap;
+            padding-top: 50px;
+        }
     }
 
     .landing-img {
@@ -37,13 +39,11 @@ $tablet-break-point: 768px;
         
         .home-projects-wrapper {
             background-size: cover;
-            .project-cards-container {
-                flex-direction: row;
-                justify-content: space-between;
 
-                .btn {
-                    align-self: flex-end;
-                }
+            .project-cards-container {
+                .project-card-notes {
+                    display: block;
+                }     
             }
         }
 
@@ -70,6 +70,10 @@ $tablet-break-point: 768px;
         .home-skills-wrapper {
             .skills-list {
                 grid-row-gap: 40px;
+
+                span {
+                    font-size: 24px;
+                }
             }
         }
     }  

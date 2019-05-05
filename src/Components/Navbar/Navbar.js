@@ -34,9 +34,7 @@ function Navbar(props) {
                     <span className='close navbar-hamburger' onClick={() => {setActive(isActive ? false : true)}}><FontAwesomeIcon icon="times" /> </span>
                 }
                 <NavBarLink active={pageStatus.home ? 'active-page' : ''} close={closeNav} path='/' icon='home' name='Home' />
-                <NavBarLink active={pageStatus.projects ? 'active-page' : ''} close={closeNav} path='/projects' icon='layer-group' name='Portfolio' />
-                <NavBarLink active={pageStatus.about ? 'active-page' : ''}  close={closeNav} path='/about' icon='info-circle' name='About' />
-                <NavBarLink active={pageStatus.contact ? 'active-page' : ''}  close={closeNav} path='/contact' icon='address-card' name='Contact' />
+                {/* <NavBarLink active={pageStatus.projects ? 'active-page' : ''} close={closeNav} path='/projects' icon='layer-group' name='Portfolio' /> */}
             </div>
         </nav>
     )
