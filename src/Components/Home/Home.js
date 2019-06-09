@@ -95,7 +95,7 @@ export default function Home() {
           <span><FontAwesomeIcon icon={['fab', 'html5']} />HTML5 </span>
           <span><FontAwesomeIcon icon={['fab', 'css3-alt']} />CSS3</span>
           <span><FontAwesomeIcon icon={['fab', 'js']} />JavaScript</span>
-          <span><FontAwesomeIcon icon='code' />C++</span>
+          <span><FontAwesomeIcon icon={['fab', 'react']} />React</span>
           <span><FontAwesomeIcon icon={['fab', 'node']} />NodeJs</span>
           <span><FontAwesomeIcon icon='database' />PostgresSQL</span>
         </div>
