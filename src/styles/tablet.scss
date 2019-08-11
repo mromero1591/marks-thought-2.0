@@ -1,8 +1,7 @@
 $tablet-break-point: 768px;
 
 //TABLET SIZE
-@media only screen and (min-device-width : $tablet-break-point) {
-
+@media only screen and (min-device-width: $tablet-break-point) {
     .section-title {
         font-size: 32px;
     }
@@ -36,14 +35,24 @@ $tablet-break-point: 768px;
             font-size: 36px;
         }
 
-        
         .home-projects-wrapper {
             background-size: cover;
 
             .project-cards-container {
+                .project-card {
+                    flex-flow: row;
+                    display: flex;
+
+                    .project-card-button-group {
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: space-evenly;
+                        margin-left: 20px;
+                    }
+                }
                 .project-card-notes {
                     display: block;
-                }     
+                }
             }
         }
 
@@ -76,7 +85,7 @@ $tablet-break-point: 768px;
                 }
             }
         }
-    }  
+    }
 
     .footer {
         font-size: 16px;
